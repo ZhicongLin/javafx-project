@@ -1,0 +1,172 @@
+.bg {
+    -fx-background-color: rgba(17, 93, 142, 0.47);
+}
+
+.bg-withe {
+    -fx-background-color: #ffffff;
+}
+
+.bg-padding {
+    -fx-background-color: rgb(143, 179, 202);
+    -fx-background-insets: 0;
+    -fx-padding: 5px;
+}
+
+.top_padding {
+    -fx-padding: 5;
+}
+
+.flag-warning {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #f0ad4e;
+    -fx-border-color: #eea236;
+}
+
+.flag-success {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #5cb85c;
+    -fx-border-color: #4cae4c;
+}
+
+.header {
+    -fx-font-weight: normal;
+    -fx-text-alignment: center;
+    -fx-cursor: default;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-background-insets: 0, 0, -1, 0;
+    -fx-padding: 6px 12px 6px 12px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-min-width: 80;
+}
+
+.font-55 {
+    -fx-font-size: 55pt;
+}
+
+.font-20 {
+    -fx-font-size: 20pt;
+}
+
+.font-14 {
+    -fx-font-size: 13pt;
+}
+
+.font-30 {
+    -fx-font-size: 30pt;
+}
+
+.text-field {
+    -fx-font-size: 15px;
+    -fx-pref-width: 120pt;
+    -fx-pref-height: 23pt;
+    -fx-padding: 5px;
+    -fx-border-color: rgb(143, 179, 202);
+    -fx-border-radius: 3pt;
+
+}
+
+.combo-box {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #31708f;
+    -fx-fill: #31708f;
+    -fx-border-color: rgb(143, 179, 202);
+    -fx-border-radius: 3pt;
+}
+
+.tooltip {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #31708f;
+    -fx-fill: #31708f;
+    -fx-border-color: rgb(143, 179, 202);
+    -fx-border-radius: 3pt;
+    -fx-font-size: 12pt;
+}
+
+.button {
+    -fx-border-color: rgb(122, 163, 189);
+    -fx-border-radius: 3pt;
+}
+
+.text-label {
+    -fx-font-size: 15px;
+    -fx-pref-width: 90pt;
+    -fx-pref-height: 23pt;
+    -fx-padding: 5px;
+}
+
+.progress-bar-box {
+    -fx-pref-height: 23pt;
+    -fx-max-height: 23pt;
+    -fx-min-height: 23pt;
+}
+
+.scroll-full-pane {
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: true;
+}
+
+.bg-blue {
+    -fx-background-color: #2e6da4;
+}
+
+.title-label {
+    -fx-font-size: 13pt;
+}
+
+#mainWindow {
+    -fx-font-size: 11pt;
+}
+
+#mainWindow .panel-footer {
+    -fx-font-size: 10pt;
+}
+
+#mainWindow .tree-view {
+    -fx-background-insets: 0;
+}
+
+#mainWindow #leftBox {
+    -fx-background-insets: 0;
+}
+
+#mainWindow .border-none {
+    -fx-background-insets: 0;
+}
+
+#mainWindow .tree-item {
+    -fx-background-insets: 0;
+}
+
+#mainWindow .tree-item:selected {
+    -fx-background-insets: 0;
+    -fx-border-color: rgb(143, 179, 202);
+}
+
+.split-pane-divider {
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0;
+}
+
+
+/* 修改TabPane的Pane区域背景颜色 */
+.tab-pane {
+    -fx-background-color: #f0f0f0;
+}
+
+/* 修改顶栏的背景颜色 */
+.tab-pane > *.tab-header-area > *.tab-header-background {
+    -fx-background-color: -fx-outer-border, -fx-text-box-border, rgb(240, 240, 240);
+    -fx-border-color: rgb(143, 179, 202);
+}
+
+/* Tab选中的时候选中其边框并修改样式 */
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-radius: 0px;
+    -fx-border-width: 1px 1px 1px 1px;
+}

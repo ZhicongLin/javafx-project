@@ -1,0 +1,32 @@
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.0.168:1521:ORCL
+    username: XZSP_DEV1
+    password: XZSP_DEV1
+    driverClassName: oracle.jdbc.OracleDriver
+    hikari:
+      connection-test-query: select 1 from dual
+      connection-timeout: 10000
+      maximum-pool-size: 10
+      minimum-idle: 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    database-platform: org.hibernate.dialect.MySQLDialect
+  thymeleaf:
+    cache: false
+  jmx:
+    enabled: false
+  application:
+    name: AppForMongodbUpgrade
+system.deviceVersion:  v1.0.0
+logging:
+  level:
+    org.springframework: info
+    com.mongodb.sync: debug
+server:
+  port: 10001

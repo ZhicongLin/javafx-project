@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane fx:id="mainWindow" style="-fx-padding: 5;" styleClass="bg" minWidth="1100" minHeight="768"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mongodb.sync.module.controller.MainController">
+    <stylesheets>
+        <URL value="@../css/bootstrapfx.css"/>
+        <URL value="@../css/main.css"/>
+    </stylesheets>
+    <top>
+        <HBox fx:id="menuBar">
+            <MenuBar styleClass="bg-padding" style="-fx-padding: 0">
+                <Menu>
+                    <text>文件</text>
+                    <MenuItem accelerator="SHIFT+CTRL+I" onAction="#addConnect">
+                        <text>新增链接</text>
+                    </MenuItem>
+                </Menu>
+                <Menu>
+                    <text>帮助</text>
+                    <MenuItem accelerator="ALT+W" onAction="#helpAlert">
+                        <text>使用文档</text>
+                    </MenuItem>
+                    <MenuItem accelerator="ALT+E" onAction="#sqlAlert">
+                        <text>SQL脚本</text>
+                    </MenuItem>
+                    <MenuItem accelerator="ALT+Q" onAction="#aboutAlert">
+                        <text>关于应用</text>
+                    </MenuItem>
+                </Menu>
+            </MenuBar>
+        </HBox>
+    </top>
+    <left>
+        <HBox fx:id="leftBox" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" maxWidth="200.0"
+              minWidth="200.0" styleClass="panel-body" style="-fx-border-color:  rgb(143, 179, 202);-fx-spacing: 0.5;">
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="border-none">
+                <TreeView fx:id="treeBox">
+                </TreeView>
+            </ScrollPane>
+        </HBox>
+    </left>
+    <center>
+        <!--        <SplitPane styleClass="panel-body" style="-fx-border-color:  rgb(143, 179, 202);-fx-spacing: 0.5;">-->
+        <HBox fx:id="tabPaneBox" prefHeight="518.0" prefWidth="1050.0" BorderPane.alignment="CENTER"
+              styleClass="panel-body" style="-fx-border-color:  rgb(143, 179, 202); -fx-background-color: #f0f0f0;">
+            <TabPane fx:id="tabPane" prefHeight="21.0" prefWidth="1050.0">
+            </TabPane>
+        </HBox>
+        <!--        </SplitPane>-->
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" BorderPane.alignment="CENTER" styleClass="bg-padding">
+            <VBox alignment="CENTER_LEFT" prefHeight="21.0" prefWidth="1213.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                <Label fx:id="date" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0"/>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="1213.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                <Label fx:id="version" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0"
+                       text="Copyright©2003-2020 厦门威尔信息技术有限公司 版权所有"/>
+            </VBox>
+        </HBox>
+    </bottom>
+</BorderPane>

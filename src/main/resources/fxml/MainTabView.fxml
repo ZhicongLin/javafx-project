@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.VBox?>
+<fx:root type="Tab" xmlns:fx="http://javafx.com/fxml">
+    <SplitPane fx:id="splitPane" orientation="VERTICAL">
+        <VBox fx:id="form" prefHeight="300" maxHeight="300" minHeight="300"/>
+        <ScrollPane fx:id="message" fitToWidth="true" fitToHeight="true">
+            <VBox styleClass="bg-withe"/>
+        </ScrollPane>
+        <!--        <HBox fx:id="progress" prefHeight="30" maxHeight="30" minHeight="30"/>-->
+    </SplitPane>
+</fx:root>
